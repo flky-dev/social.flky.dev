@@ -8,7 +8,8 @@
       <meta http-equiv="content-type" content="text/html; charset=UTF-8">
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1">
-      <!-- Favicon -->
+
+      <!-- Favicon, fun isn't it? Good that there are tools for generationg this! -->
       <link rel="shortcut icon" type="image/x-icon" href="files/_icons/favicon.ico">
       <link rel="icon" type="image/x-icon" href="files/_icons/favicon.ico">
       <link rel="icon" type="image/gif" href="files/_icons/favicon.gif">
@@ -40,6 +41,8 @@
       <meta name="msapplication-wide310x150logo" content="files/_icons/win8-tile-310x150.png">
       <meta name="msapplication-square310x310logo" content="files/_icons/win8-tile-310x310.png">
       <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+      <!-- Metadata, yay! -->
       <title>Social Links</title>
       <meta name="description" content="Flonkys Social Media">
       <meta property="og:title" content="Social Links">
@@ -48,41 +51,50 @@
       <meta property="og:description" content="Flonkys Social Media">
       <meta property="og:image" content="files/pfp.webp">
 
-      <!-- Styles -->
+      <!-- Stylesheet -->
       <link href="files/app.css" rel="stylesheet">
+
+      <!-- Icons, the optimization on this is awful -->
       <script src="https://kit.fontawesome.com/4df996e8b0.js" crossorigin="anonymous"></script>
 
-      <!-- Anonymous, self hosted and privacy oriented analytics -->
+      <!-- Anonymous, self hosted and privacy oriented analytics powered by Ackee. Don't worry, I'm not facebook^^ -->
       <script async src="https://analytics.flky.dev/tracker.js" data-ackee-server="https://analytics.flky.dev"
          data-ackee-domain-id="0e3dcf46-a2fb-4a3e-acb3-2afc2d22a193"></script>
+
+      <!-- Monero OnClick -->
       <script>
-         function copy(text) {
-         	temp = document.createElement("input");
-         	document.body.appendChild(temp);
-         	temp.value = text;
-         	temp.select();
-         	navigator.clipboard.writeText(temp.value);
-         	temp.remove();
-         	alert("Copied!")
+         function monero() {
+            walletAdress = "45rq9JXhPaR8F2Xy2ybt3rgMrcPdeqoaZWRfQDvutCtmG5jDWoYBMEQ8jpaASpVhbk9cjcMgAuguu7QZvri6VEjGKrPkP4w" // Monero Wallet Address
+            window.open(`monero://${walletAdress}?tx_description=Donation`, '_blank'); // Try to open Monero Wallet in desktop application
+
+            // Copy the address to clipboard in case the user doesn't have an application to open it. Why can't all of this this just be one line?
+            temp = document.createElement("input");
+            document.body.appendChild(temp);
+            temp.value = walletAdress;
+            temp.select();
+            navigator.clipboard.writeText(temp.value);
+            temp.remove();
+
+            alert("Address copied to Clipboard!") // Yay alerts, who doesn't love these?
          }
       </script>
    </head>
 
    <body data-aos-easing="ease" data-aos-duration="400" data-aos-delay="0">
       <div id="profile">
-         <div style="background-color: rgb(33, 33, 33); background-size: cover; background-repeat: no-repeat; background-attachment: fixed; background-position: center center;"
+         <div
+            style="background-color: rgb(33, 33, 33); background-size: cover; background-repeat: no-repeat; background-attachment: fixed; background-position: center center;"
             class="user-page-container text-center pt-5">
             <div style="padding-bottom: 150px;">
                <div class="container">
                   <div class="mx-auto col-md-8">
                      <div class="py-2 text-center">
-						 <img src="files/pfp.webp" style="width: 40%;" class="img-fluid rounded">
-					</div>
-									
-                    <div class="list-group-rounded">
+                        <img src="files/pfp.webp" style="width: 40%;" class="img-fluid rounded">
+                     </div>
+
+                     <div class="list-group-rounded">
                         <div>
-                           <a style="min-height: 6rem;" href="https://flky.dev" rel="noopener noreferrer"
-                              target="_blank"
+                           <a style="min-height: 6rem;" href="https://flky.dev" rel="noopener noreferrer" target="_blank"
                               class="d-flex flex-column justify-content-center shadow-sm my-2 hvr-grow-shadow list-group-item-action list-group-item-secondary list-group-item">
                               <div class="my-auto mx-auto">
                                  <div
@@ -90,8 +102,7 @@
                                     <i class="fas fa-home"></i>
                                  </div>
                               </div>
-                              <span style="white-space: pre-line;"
-                                 class="lead text-break my-auto undefined">Website</span>
+                              <span style="white-space: pre-line;" class="lead text-break my-auto undefined">Website</span>
                            </a>
                         </div>
 
@@ -105,13 +116,13 @@
                                     <i class="fab fa-steam"></i>
                                  </div>
                               </div>
-                              <span style="white-space: pre-line;"
-                                 class="lead text-break my-auto undefined">Steam</span>
+                              <span style="white-space: pre-line;" class="lead text-break my-auto undefined">Steam</span>
                            </a>
                         </div>
 
                         <div>
-                           <a style="min-height: 6rem;" href="https://vrchat.com/home/user/usr_38d8e21a-7e89-4429-87d1-ab9b3ae763e5"
+                           <a style="min-height: 6rem;"
+                              href="https://vrchat.com/home/user/usr_38d8e21a-7e89-4429-87d1-ab9b3ae763e5"
                               rel="noopener noreferrer" target="_blank"
                               class="d-flex flex-column justify-content-center shadow-sm my-2 hvr-grow-shadow list-group-item-action list-group-item-secondary list-group-item">
                               <div class="my-auto mx-auto">
@@ -120,23 +131,7 @@
                                     <i class="fa-solid fa-vr-cardboard"></i>
                                  </div>
                               </div>
-                              <span style="white-space: pre-line;"
-                                 class="lead text-break my-auto undefined">VRChat</span>
-                           </a>
-                        </div>
-
-                        <div>
-                           <a style="min-height: 6rem;" href="https://ko-fi.com/flonky" rel="noopener noreferrer"
-                              target="_blank"
-                              class="d-flex flex-column justify-content-center shadow-sm my-2 hvr-grow-shadow list-group-item-action list-group-item-secondary list-group-item">
-                              <div class="my-auto mx-auto">
-                                 <div
-                                    style="height: 30px; padding-top: 0px; line-height: 0px; font-size: 30px; color: #DADCE0;">
-                                    <i class="fas fa-coffee"></i>
-                                 </div>
-                              </div>
-                              <span style="white-space: pre-line;"
-                                 class="lead text-break my-auto undefined">Ko-Fi</span>
+                              <span style="white-space: pre-line;" class="lead text-break my-auto undefined">VRChat</span>
                            </a>
                         </div>
 
@@ -165,14 +160,13 @@
                                     <i class="fab fa-twitch"></i>
                                  </div>
                               </div>
-                              <span style="white-space: pre-line;"
-                                 class="lead text-break my-auto undefined">Twitch</span>
+                              <span style="white-space: pre-line;" class="lead text-break my-auto undefined">Twitch</span>
                            </a>
                         </div>
 
                         <div>
-                           <a style="min-height: 6rem;" href="https://twitter.com/Flonky_"
-                              rel="noopener noreferrer" target="_blank"
+                           <a style="min-height: 6rem;" href="https://twitter.com/Flonky_" rel="noopener noreferrer"
+                              target="_blank"
                               class="d-flex flex-column justify-content-center shadow-sm my-2 hvr-grow-shadow list-group-item-action list-group-item-secondary list-group-item">
                               <div class="my-auto mx-auto">
                                  <div
@@ -180,8 +174,7 @@
                                     <i class="fab fa-twitter"></i>
                                  </div>
                               </div>
-                              <span style="white-space: pre-line;"
-                                 class="lead text-break my-auto undefined">Twitter</span>
+                              <span style="white-space: pre-line;" class="lead text-break my-auto undefined">Twitter</span>
                            </a>
                         </div>
 
@@ -195,8 +188,7 @@
                                     <i class="fab fa-github"></i>
                                  </div>
                               </div>
-                              <span style="white-space: pre-line;"
-                                 class="lead text-break my-auto undefined">GitHub</span>
+                              <span style="white-space: pre-line;" class="lead text-break my-auto undefined">GitHub</span>
                            </a>
                         </div>
 
@@ -210,13 +202,13 @@
                                     <i class="fab fa-dev"></i>
                                  </div>
                               </div>
-                              <span style="white-space: pre-line;"
-                                 class="lead text-break my-auto undefined">DEV</span>
+                              <span style="white-space: pre-line;" class="lead text-break my-auto undefined">DEV</span>
                            </a>
                         </div>
 
                         <div>
-                           <a style="min-height: 6rem;" href="https://discordapp.com/users/355330245433360384/" rel="noopener noreferrer" target="_blank"
+                           <a style="min-height: 6rem;" href="https://discordapp.com/users/355330245433360384/"
+                              rel="noopener noreferrer" target="_blank"
                               class="d-flex flex-column justify-content-center shadow-sm my-2 hvr-grow-shadow list-group-item-action list-group-item-secondary list-group-item">
                               <div class="my-auto mx-auto">
                                  <div
@@ -224,14 +216,42 @@
                                     <i class="fab fa-discord"></i>
                                  </div>
                               </div>
-                              <span style="white-space: pre-line;"
-                                 class="lead text-break my-auto undefined">Discord</span>
+                              <span style="white-space: pre-line;" class="lead text-break my-auto undefined">Discord</span>
                            </a>
                         </div>
-						
+
+                        <div>
+                           <a style="min-height: 6rem;" href="https://ko-fi.com/flonky" rel="noopener noreferrer"
+                              target="_blank"
+                              class="d-flex flex-column justify-content-center shadow-sm my-2 hvr-grow-shadow list-group-item-action list-group-item-secondary list-group-item">
+                              <div class="my-auto mx-auto">
+                                 <div
+                                    style="height: 30px; padding-top: 0px; line-height: 0px; font-size: 30px; color: #DADCE0;">
+                                    <i class="fas fa-coffee"></i>
+                                 </div>
+                              </div>
+                              <span style="white-space: pre-line;" class="lead text-break my-auto undefined">Ko-Fi</span>
+                           </a>
+                        </div>
+
+                        <div>
+                           <a style="min-height: 6rem;" href="https://liberapay.com/flky" rel="noopener noreferrer"
+                              target="_blank"
+                              class="d-flex flex-column justify-content-center shadow-sm my-2 hvr-grow-shadow list-group-item-action list-group-item-secondary list-group-item">
+                              <div class="my-auto mx-auto">
+                                 <div
+                                    style="height: 30px; padding-top: 0px; line-height: 0px; font-size: 30px; color: #DADCE0;">
+                                    <i class="fas fa-dollar-sign"></i>
+                                 </div>
+                              </div>
+                              <span style="white-space: pre-line;"
+                                 class="lead text-break my-auto undefined">Liberapay</span>
+                           </a>
+                        </div>
+
                         <div>
                            <a style="min-height: 6rem;"
-                              onclick="copy('45rq9JXhPaR8F2Xy2ybt3rgMrcPdeqoaZWRfQDvutCtmG5jDWoYBMEQ8jpaASpVhbk9cjcMgAuguu7QZvri6VEjGKrPkP4w')"
+                              onclick="monero()"
                               class="d-flex flex-column justify-content-center shadow-sm my-2 hvr-grow-shadow list-group-item-action list-group-item-secondary list-group-item">
                               <div class="my-auto mx-auto">
                                  <div
@@ -239,8 +259,7 @@
                                     <i class="fab fa-monero"></i>
                                  </div>
                               </div>
-                              <span style="white-space: pre-line;"
-                                 class="lead text-break my-auto undefined">Donate Monero</span>
+                              <span style="white-space: pre-line;" class="lead text-break my-auto undefined">Monero</span>
                            </a>
                         </div>
                      </div>
@@ -251,4 +270,3 @@
       </div>
    </body>
 </html>
-
