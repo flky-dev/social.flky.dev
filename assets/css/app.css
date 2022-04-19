@@ -39,10 +39,6 @@ main {
   transition: all .5s ease;
 }
 
-main:hover {
-  transform: translate(10px, 10px);
-  box-shadow: 0px 0px var(--main-shadow);
-}
 
 main div {
   margin-bottom: 2rem;
@@ -81,15 +77,17 @@ a div {
   border-radius: 8px;
   box-shadow: 10px 10px var(--box-shadow);
   text-align: center;
+  transition: all .5s ease;
 }
 
 a div:hover {
   background-color: var(--box-shadow);
-  box-shadow: 10px 10px var(--box);
+  transform: translate(10px, 10px);
+  box-shadow: 0px 0px var(--box);
 }
 
 a div:hover p {
-  color: black;
+  color: var(--primary);
 }
 
 a div img {
