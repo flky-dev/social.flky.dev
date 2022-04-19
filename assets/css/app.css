@@ -10,6 +10,7 @@
   --background: url(../images/bg.png);
   --speed: 180s;
   --bgimage-width: -6221px;
+  --shadow-size: 1.25vmin;
 }
 
 html {
@@ -19,7 +20,7 @@ html {
 }
 body {
   margin: 0;
-  padding: 0.5rem;
+  padding: 0.4vmin;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -31,42 +32,43 @@ body {
 
 main {
   background-color: var(--theme);
-  padding: 3rem;
+  padding: 4vmin;
   border-radius: 8px;
-  box-shadow: 10px 10px var(--main-shadow);
+  box-shadow: var(--shadow-size) var(--shadow-size) var(--main-shadow);
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   transition: all .5s ease;
+  margin-bottom: 1vmin;
 }
 
 
 main div {
-  margin-bottom: 2rem;
+  margin-bottom: 4vmin;
   width: 30vw;
 }
 
 main .profile img {
   width: 40%;
   border-radius: 50%;
-  box-shadow: 10px 6px var(--profile-shadow);
+  box-shadow: var(--shadow-size) var(--shadow-size) var(--profile-shadow);
   transition: all .5s ease;
 }
 
 main .profile img:hover {
   cursor: pointer;
-  transform: translate(10px, 10px);
+  transform: translate(var(--shadow-size), var(--shadow-size));
   box-shadow: 0px 0px var(--profile-shadow);
 }
 
 main .profile h1 {
-  font-size: 2rem;
+  font-size: 4vmin;
   font-weight: bolder;
 }
 
 img {
-  margin-bottom: 0.3rem;
+  margin-bottom: 0.6vmin;
 }
 
 a {
@@ -75,16 +77,16 @@ a {
 
 a div {
   background-color: var(--box);
-  padding: 1rem;
+  padding: 2vmin;
   border-radius: 8px;
-  box-shadow: 10px 10px var(--box-shadow);
+  box-shadow: var(--shadow-size) var(--shadow-size) var(--box-shadow);
   text-align: center;
   transition: all .5s ease;
 }
 
 a div:hover {
   background-color: var(--box-shadow);
-  transform: translate(10px, 10px);
+  transform: translate(var(--shadow-size), var(--shadow-size));
   box-shadow: 0px 0px var(--box);
 }
 
@@ -93,7 +95,7 @@ a div:hover p {
 }
 
 a div img {
-  width: 2rem;
+  width: 4vmin;
 }
 
 a div p {
@@ -101,18 +103,18 @@ a div p {
   color: white;
   text-align: center;
   position: relative;
-  top: -0.5rem;
+  top: -1vmin;
 }
 
 a div:active {
-  transform: translate(10px, 10px);
+  transform: translate(var(--shadow-size), var(--shadow-size));
   box-shadow: 0px 0px var(--box);
 }
 
 @media (max-width: 900px) {
   main {
     width: 80%;
-    padding: 1.5rem;
+    padding: 3vmin;
     box-shadow: none;
   }
 
@@ -122,8 +124,8 @@ a div:active {
   }
 
   main .profile h1 {
-    font-size: 1.5rem;
-    margin-top: 2rem;
+    font-size: 6vmin;
+    margin-top: 4vmin;
   }
 
   main .profile img {
